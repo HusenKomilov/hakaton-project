@@ -13,6 +13,8 @@ class Hospital(BaseModel):
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
 
+    visitors = models.IntegerField(default=0, editable=False)
+
     def __str__(self):
         return self.name
 

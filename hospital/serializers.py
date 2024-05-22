@@ -30,4 +30,4 @@ class HospitalSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Hospital
         fields = ("name", "phone_number", "address",
-                  "description", "start_time", "end_time", "gallery", "doctors")
+                  "description", "start_time", "end_time", "visitors", "gallery", "doctors")
