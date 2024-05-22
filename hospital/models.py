@@ -1,12 +1,12 @@
 from django.db import models
-from phonenumber_field.modelfields import PhoneNumberField
+# from phonenumber_field.modelfields import PhoneNumberField
 from utils.models import BaseModel
 from hospital import choices
 
 
 class Hospital(BaseModel):
     name = models.CharField(max_length=128)
-    phone_number = PhoneNumberField(unique=True, region="UZ")
+    phone_number = models.CharField(unique=True, max_length=20)
     address = models.CharField(max_length=256)
     description = models.TextField()
 
@@ -36,7 +36,7 @@ class Specialty(BaseModel):
 
 class Doctor(BaseModel):
     name = models.CharField(max_length=256)
-    phone_number = PhoneNumberField(unique=True, region="UZ")
+    phone_number = models.CharField(unique=True, max_length=20)
     descriotion = models.TextField()
     image = models.ImageField(upload_to="doctor")
 
