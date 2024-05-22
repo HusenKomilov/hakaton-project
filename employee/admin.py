@@ -2,7 +2,7 @@ from django.contrib import admin
 from employee import models
 
 
-class UnderagesFiles(models.TabularInline):
+class UnderagesFiles(admin.TabularInline):
     fk_name = "underages"
     model = models.UnderageFile
     extra = 1
