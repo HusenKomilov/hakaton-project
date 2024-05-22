@@ -1,11 +1,8 @@
-from django.contrib.auth.models import AbstractUser
-from django.contrib.auth.models import User
 from django.db import models
 
 
 class Organization(models.Model):
-    organization_staff = models.OneToOneField(User, on_delete=models.CASCADE)
-    organization_name = models.CharField(max_length=200)
+    organization_name = models.CharField(max_length=200, unique=True)
     total_money = models.IntegerField(default=0)
     spend_money = models.PositiveBigIntegerField(default=0)
     current_money = models.PositiveBigIntegerField(default=0)
