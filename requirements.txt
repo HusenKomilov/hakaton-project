@@ -1,5 +1,6 @@
 asgiref==3.8.1
-Django==4.0
+Django==5.0.6
+django-jazzmin==3.0.0
 django-phonenumber-field==7.3.0
 phonenumbers==8.13.37
 phonenumberslite==8.13.37
